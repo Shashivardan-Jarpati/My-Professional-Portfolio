@@ -11,59 +11,6 @@ import {
 const projects = [
   {
     id: 1,
-    title: "GradGenie AI - Academic Assistant for Engineering Students",
-    shortTitle: "AI-Powered Study Assistant",
-    tagline: "Branch-aware AI assistant delivering exam-focused answers and smart study strategies",
-
-    description: "Developed a domain-specific AI academic assistant using LLM APIs and Streamlit to provide branch-aware, exam-oriented responses for engineering students with multiple intelligent learning modes.",
-
-    fullDescription: `Developed GradGenie AI, a domain-focused academic assistant designed specifically for engineering students to enhance exam preparation, concept clarity, and last-minute study efficiency.
-
-Key Achievements:
-• Designed a branch-aware AI system supporting CSE, ECE, EEE, Mechanical, and Civil engineering with contextual response generation
-• Implemented multi-mode intelligence including AI Tutor, Backlog Rescue, Doubt Solver, and Smart Exam Mode for different academic needs
-• Built an exam-focused output system generating structured 5-mark and 10-mark answers, revision notes, and important topic predictions
-• Developed a prompt engineering framework to ensure concise, structured, and scoring-oriented responses instead of generic AI outputs
-• Deployed a fully functional web application using Streamlit with real-time AI response generation via LLM APIs
-• Focused on solving real student challenges such as backlogs, exam pressure, and time-constrained preparation
-
-Technologies: Python, Streamlit, LLM APIs, Prompt Engineering, GitHub`,
-
-    technologies: ["Python", "Streamlit", "LLM APIs", "Prompt Engineering", "GitHub"],
-
-    icon: Brain,
-    color: "purple",
-
-    impact: "Helps engineering students prepare efficiently by delivering structured, exam-ready answers and reducing study time"
-  },
-  {
-    id: 2,
-    title: "AI Traffic Detection & Speed Analysis System",
-    shortTitle: "Computer Vision Traffic Analytics",
-    tagline: "Real-time traffic monitoring with speed estimation and dashboard analytics",
-
-    description: "Developed an end-to-end AI-based traffic analysis system using YOLOv8 and OpenCV to detect, classify, and analyze vehicles from video data with interactive dashboard visualization.",
-
-    fullDescription: `Developed an end-to-end AI-based traffic detection and speed analysis system using computer vision techniques to process real-world traffic video data and generate actionable insights.
-
-Key Achievements:
-• Implemented real-time vehicle detection and classification (cars, bikes, trucks) using YOLOv8 for efficient object detection
-• Designed a frame-based traffic analysis pipeline to compute vehicle density, flow patterns, and congestion trends
-• Developed an approximate vehicle speed estimation mechanism using motion tracking across frames
-• Built an interactive Streamlit dashboard to visualize traffic trends, vehicle distribution, and speed analytics
-• Ensured optimized performance through frame skipping, resolution tuning, and lightweight model selection for smooth execution
-
-Technologies: Python, OpenCV, YOLOv8, Streamlit, Pandas`,
-
-    technologies: ["Python", "OpenCV", "YOLOv8", "Streamlit", "Pandas"],
-
-    icon: Brain,
-    color: "blue",
-
-    impact: "Provides real-time traffic insights and speed analysis for smart monitoring systems"
-  },
-  {
-    id: 3,
     title: "Banking Fraud Detection System",
     shortTitle: "ML-Based Fraud Detection",
     tagline: "End-to-end fraud detection with Flask deployment",
@@ -82,7 +29,7 @@ Technologies: Python, Flask, CatBoost, XGBoost, LightGBM, RESTful APIs`,
     impact: "Real-time fraud detection in production"
   },
   {
-    id: 4,
+    id: 2,
     title: "Privacy-Preserving Machine Learning",
     shortTitle: "Secure AI Systems",
     tagline: "Safeguarding sensitive data in AI",
@@ -102,7 +49,7 @@ Impact:
     impact: "Compliance-ready AI systems"
   },
   {
-    id: 5,
+    id: 3,
     title: "Ambulance Service Platform",
     shortTitle: "Emergency Response System",
     tagline: "Revolutionizing emergency medical services",
