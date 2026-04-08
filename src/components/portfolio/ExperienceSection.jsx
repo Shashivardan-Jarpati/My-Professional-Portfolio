@@ -1,7 +1,34 @@
 import React from 'react';
-import { Briefcase, Award, Star, Code, Wrench, TrendingUp } from 'lucide-react';
+import { Briefcase, Star, Code, Wrench, TrendingUp, Brain } from 'lucide-react';
 
 const internships = [
+  {
+    title: "AI & Machine Learning Intern",
+    company: "Edunet Foundation (AICTE)",
+    type: "Remote (AICTE)",
+    period: "Jan 2026 - Feb 2026",
+    icon: Brain,
+    color: "green",
+    achievements: [
+      "Completed a 6-week internship on Artificial Intelligence & Machine Learning in collaboration with AICTE and IBM SkillsBuild",
+      "Worked on structured weekly deliverables including project tasks, Q&A sessions, and a final project presentation",
+      "Gained hands-on experience with ML concepts, self-paced learning modules, and real-world AI application development"
+    ]
+  },
+  {
+    title: "Machine Learning Intern",
+    company: "Future Interns",
+    type: "Remote",
+    period: "Jan 2026 - Feb 2026",
+    icon: TrendingUp,
+    color: "red",
+    badge: "Letter of Recommendation",
+    achievements: [
+      "Completed a 1-month Machine Learning internship under the Fellowship Program at Future Interns (ISO 9001 Certified, MSME Registered)",
+      "Demonstrated professionalism, responsibility, and commitment while working on structured, task-based ML assignments",
+      "Awarded Letter of Recommendation for steady improvement in technical understanding and problem-solving skills"
+    ]
+  },
   {
     title: "Microsoft Copilot - Emerging Technologies Intern",
     company: "Microsoft Elevate (AICTE)",
@@ -34,7 +61,7 @@ const internships = [
     type: "Remote (AICTE)",
     period: "Dec 2025 - Jan 2026",
     icon: Code,
-    color: "purple",
+    color: "yellow",
     achievements: [
       "Completed an AICTE-aligned internship focused on Python programming and problem-solving",
       "Developed Python programs to implement logical solutions for real-world tasks",
@@ -94,18 +121,20 @@ const colorMap = {
   violet: { bg: "bg-violet-500/10", border: "border-violet-500/20", text: "text-violet-400" },
   purple: { bg: "bg-purple-500/10", border: "border-purple-500/20", text: "text-purple-400" },
   pink: { bg: "bg-pink-500/10", border: "border-pink-500/20", text: "text-pink-400" },
-  cyan: { bg: "bg-cyan-500/10", border: "border-cyan-500/20", text: "text-cyan-400" }
+  cyan: { bg: "bg-cyan-500/10", border: "border-cyan-500/20", text: "text-cyan-400" },
+  emerald: { bg: "bg-emerald-500/10", border: "border-emerald-500/20", text: "text-emerald-400" },
+  green: { bg: "bg-green-500/10", border: "border-green-500/20", text: "text-green-400" },
+  red: { bg: "bg-red-500/10", border: "border-red-500/20", text: "text-red-400" },
+  yellow: { bg: "bg-yellow-500/10", border: "border-yellow-500/20", text: "text-yellow-400" },
 };
 
 export default function ExperienceSection() {
   return (
     <section id="experience" className="py-24 md:py-32 bg-slate-950 relative">
-      {/* Background Elements */}
       <div className="absolute top-1/4 left-0 w-96 h-96 bg-violet-600/5 rounded-full blur-3xl" />
       <div className="absolute bottom-1/4 right-0 w-80 h-80 bg-purple-600/5 rounded-full blur-3xl" />
 
       <div className="max-w-6xl mx-auto px-6 relative">
-        {/* Section Header */}
         <div className="text-center mb-16">
           <span className="inline-block px-4 py-1.5 rounded-full bg-violet-500/10 border border-violet-500/20 text-violet-400 text-sm font-medium mb-4">
             Professional Experience
@@ -125,17 +154,14 @@ export default function ExperienceSection() {
             {internships.map((internship, index) => {
               const colors = colorMap[internship.color];
               return (
-                <div 
+                <div
                   key={index}
                   className="bg-gradient-to-br from-slate-900 to-slate-900/50 rounded-3xl p-8 border border-slate-800/50 hover:border-slate-700/50 transition-all group"
                 >
                   <div className="flex flex-col md:flex-row md:items-start gap-6">
-                    {/* Icon */}
                     <div className={`w-14 h-14 rounded-2xl ${colors.bg} border ${colors.border} flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform`}>
                       <internship.icon className={`w-7 h-7 ${colors.text}`} />
                     </div>
-
-                    {/* Content */}
                     <div className="flex-1">
                       <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-4">
                         <div>
@@ -152,8 +178,6 @@ export default function ExperienceSection() {
                           <p className="text-slate-500 text-sm">{internship.type} • {internship.period}</p>
                         </div>
                       </div>
-
-                      {/* Achievements */}
                       <ul className="space-y-2">
                         {internship.achievements.map((achievement, idx) => (
                           <li key={idx} className="flex items-start gap-2 text-slate-400 text-sm">
@@ -175,7 +199,7 @@ export default function ExperienceSection() {
           <h3 className="text-sm font-medium text-slate-500 uppercase tracking-wider mb-6">Industry Job Simulations (Forage)</h3>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {simulations.map((sim, index) => (
-              <div 
+              <div
                 key={index}
                 className="bg-gradient-to-br from-slate-900 to-slate-900/50 rounded-2xl p-6 border border-slate-800/50 hover:border-violet-500/30 transition-all group cursor-pointer"
               >
@@ -185,16 +209,13 @@ export default function ExperienceSection() {
                   </div>
                   <div>
                     <h4 className="font-semibold text-white mb-1 text-sm leading-tight">{sim.title}</h4>
-                    <p className="text-violet-400 text-xs font-medium">{sim.company}</p>
+                    <p className="text-red-400 text-xs font-medium">{sim.company}</p>
                     <p className="text-slate-500 text-xs mt-1">{sim.period}</p>
                   </div>
                 </div>
                 <div className="flex flex-wrap gap-2">
                   {sim.skills.map((skill, idx) => (
-                    <span 
-                      key={idx}
-                      className="px-2 py-1 rounded-lg bg-slate-800/50 border border-slate-700/50 text-slate-400 text-xs"
-                    >
+                    <span key={idx} className="px-2 py-1 rounded-lg bg-slate-800/50 border border-slate-700/50 text-slate-400 text-xs">
                       {skill}
                     </span>
                   ))}
