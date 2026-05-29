@@ -1,51 +1,74 @@
 import React from 'react';
 import useReveal from "@/hooks/useReveal";
-import { Code2, Database, Wrench, Users } from 'lucide-react';
+import { Code2, Brain, Wrench, Users, Cpu } from 'lucide-react';
 
 const skillCategories = [
   {
-    title: "Programming",
+    title: "Languages & Databases",
     icon: Code2,
     color: "violet",
     skills: [
       { name: "Python", level: 90 },
+      { name: "SQL", level: 60 },
       { name: "JavaScript", level: 65 },
-      { name: "HTML & CSS", level: 75 },
-      { name: "OOP", level: 80 }
+      { name: "MySQL", level: 55 },
     ]
   },
   {
     title: "Machine Learning & AI",
-    icon: Database,
+    icon: Brain,
     color: "purple",
     skills: [
-      { name: "Scikit-learn", level: 85 },
-      { name: "TensorFlow", level: 75 },
-      { name: "XGBoost/LightGBM", level: 80 },
-      { name: "Feature Engineering", level: 85 }
+      { name: "Supervised Learning & Classification", level: 85 },
+      { name: "XGBoost / LightGBM / CatBoost", level: 85 },
+      { name: "Feature Engineering", level: 88 },
+      { name: "Hyperparameter Tuning", level: 82 },
+      { name: "Anomaly Detection & SMOTE", level: 80 },
     ]
   },
   {
-    title: "Data Science",
-    icon: Wrench,
+    title: "Gen AI",
+    icon: Cpu,
     color: "pink",
     skills: [
-      { name: "NumPy & Pandas", level: 90 },
-      { name: "EDA", level: 85 },
-      { name: "Power BI", level: 70 },
-      { name: "Statistical Analysis", level: 80 }
+      { name: "LLMs & Prompt Engineering", level: 82 },
+      { name: "LangChain", level: 78 },
+      { name: "RAG", level: 75 },
+    ]
+  },
+  {
+    title: "Frameworks & Tools",
+    icon: Wrench,
+    color: "cyan",
+    skills: [
+      { name: "Scikit-learn & TensorFlow", level: 85 },
+      { name: "Flask & Streamlit", level: 82 },
+      { name: "Pandas & NumPy", level: 90 },
+      { name: "Matplotlib", level: 75 },
+      { name: "Git, GitHub & Docker", level: 80 },
+    ]
+  },
+  {
+    title: "Computer Vision & Tools",
+    icon: Wrench,
+    color: "violet",
+    skills: [
+      { name: "YOLOv8", level: 80 },
+      { name: "OpenCV", level: 78 },
+      { name: "Object Detection", level: 78 },
+      { name: "VS Code", level: 90 },
     ]
   },
   {
     title: "Soft Skills",
     icon: Users,
-    color: "cyan",
+    color: "purple",
     skills: [
       { name: "Problem Solving", level: 90 },
       { name: "Communication", level: 88 },
       { name: "Time Management", level: 85 },
       { name: "Analytical Thinking", level: 90 },
-      { name: "Attention to Detail", level: 87 }
+      { name: "Attention to Detail", level: 87 },
     ]
   }
 ];
@@ -96,7 +119,7 @@ export default function SkillsSection() {
             Technical Arsenal
           </h2>
           <p className="text-slate-400 max-w-2xl mx-auto">
-            A diverse skill set combining programming languages, databases, tools, and essential soft skills
+            A diverse skill set combining programming languages, ML, Gen AI, frameworks and essential soft skills
           </p>
         </div>
 
@@ -148,7 +171,7 @@ export default function SkillsSection() {
         <div className="mt-12 text-center">
           <p className="text-slate-500 text-sm mb-4">Also familiar with</p>
           <div className="flex flex-wrap justify-center gap-2">
-            {["Flask", "RESTful API", "SQL", "MySQL", "PostgreSQL", "MongoDB", "Git", "GitHub", "VS Code", "CatBoost", "Model Optimization", "Hyperparameter Tuning", "Cross-Validation", "Anomaly Detection", "Differential Privacy", "Federated Learning", "PyTorch"].map((tag) => (
+            {["RAG", "LLMs", "Prompt Engineering", "LangChain", "YOLOv8", "OpenCV", "Docker", "Streamlit", "Matplotlib", "HTML", "CSS", "Flask", "Git", "GitHub", "VS Code", "MySQL", "SQL"].map((tag) => (
               <span 
                 key={tag}
                 className="px-4 py-2 rounded-full bg-slate-800/50 border border-slate-700/50 text-slate-400 text-sm hover:text-violet-400 hover:border-violet-500/50 transition-colors cursor-default"

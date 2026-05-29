@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
-import { ExternalLink, Github, ChevronRight, Brain, Shield, Ambulance, Eye } from 'lucide-react';
+import { ExternalLink, Github, ChevronRight, Brain, Shield, Ambulance, Eye, Database} from 'lucide-react';
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 
 const projects = [
   {
     id: 1,
-    title: "Banking Fraud Detection System",
+    title: "Fraud Detection using Machine Learning",
     shortTitle: "ML-Based Fraud Detection",
     tagline: "End-to-end fraud detection with Flask deployment",
     description: "Developed an end-to-end banking fraud detection system using Python and Flask, covering data ingestion, model training, and deployment.",
@@ -19,7 +19,7 @@ Key Achievements:
 
 Technologies: Python, Flask, CatBoost, XGBoost, LightGBM, RESTful APIs`,
     technologies: ["Python", "Flask", "CatBoost", "XGBoost", "LightGBM", "RESTful API"],
-    icon: Brain,
+    icon: Database,
     color: "green",
     impact: "Real-time fraud detection in production"
   },
